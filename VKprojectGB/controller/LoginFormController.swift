@@ -8,7 +8,9 @@
 import UIKit
 
 class LoginFormController: UIViewController {
-
+    
+    let session = Session.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let hideKeyboardGesture = UITapGestureRecognizer(target: self, action:
@@ -40,9 +42,11 @@ class LoginFormController: UIViewController {
     func checkUserData() -> Bool {
         let login = loginInput.text!
         let password = passwordInput.text!
-        guard login == "" && password == "" else{
+        guard login == "1" && password == "2" else{
             return false
         }
+        session.userId = 1
+        session.getToken()
         return true
     }
     

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E303DD62933E8D900B66C01 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E303DD52933E8D900B66C01 /* Session.swift */; };
+		0E3F9E6E2934A2C2006860E4 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3F9E6D2934A2C2006860E4 /* SessionViewController.swift */; };
 		0E7C09CD28100ACE000EEACD /* AvatarUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C09CC28100ACE000EEACD /* AvatarUIView.swift */; };
 		0E7C09CF2810115F000EEACD /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7C09CE2810115F000EEACD /* LikeControl.swift */; };
 		0E979AB327F9E46500A34EAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E979AB227F9E46500A34EAC /* AppDelegate.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E303DD52933E8D900B66C01 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		0E3F9E6D2934A2C2006860E4 /* SessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
 		0E7C09CC28100ACE000EEACD /* AvatarUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarUIView.swift; sourceTree = "<group>"; };
 		0E7C09CE2810115F000EEACD /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
 		0E979AAF27F9E46500A34EAC /* VKprojectGB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKprojectGB.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +67,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E303DD22933E4E100B66C01 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				0E303DD52933E8D900B66C01 /* Session.swift */,
+				0E3F9E6D2934A2C2006860E4 /* SessionViewController.swift */,
+			);
+			path = Singleton;
+			sourceTree = "<group>";
+		};
 		0E7C09D02810151D000EEACD /* Friend */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +169,7 @@
 		0E979AB127F9E46500A34EAC /* VKprojectGB */ = {
 			isa = PBXGroup;
 			children = (
+				0E303DD22933E4E100B66C01 /* Singleton */,
 				0E979AD028083EF600A34EAC /* view */,
 				0E7C09D128101549000EEACD /* Group */,
 				0E7C09D02810151D000EEACD /* Friend */,
@@ -258,7 +272,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E979AB727F9E46500A34EAC /* ViewController.swift in Sources */,
+				0E303DD62933E8D900B66C01 /* Session.swift in Sources */,
 				0E979AD42808440900A34EAC /* GroupsListController.swift in Sources */,
+				0E3F9E6E2934A2C2006860E4 /* SessionViewController.swift in Sources */,
 				0E7C09CF2810115F000EEACD /* LikeControl.swift in Sources */,
 				0E9E9BA728085A240041DD82 /* MyGroupCell.swift in Sources */,
 				0E979ADA28084D9200A34EAC /* GroupCell.swift in Sources */,
@@ -419,8 +435,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XA5B67DZT9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VKprojectGB/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -436,6 +454,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Salad.VKprojectGB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -447,8 +466,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XA5B67DZT9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VKprojectGB/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -464,6 +485,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Salad.VKprojectGB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
