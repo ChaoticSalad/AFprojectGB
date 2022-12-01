@@ -45,7 +45,7 @@ class LoginFormController: UIViewController {
         guard login == "1" && password == "2" else{
             return false
         }
-        session.userId = 1
+        session.id = 1
         session.getToken()
         return true
     }
