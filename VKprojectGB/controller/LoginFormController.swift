@@ -8,7 +8,9 @@
 import UIKit
 
 class LoginFormController: UIViewController {
-
+    
+    let session = Session.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let hideKeyboardGesture = UITapGestureRecognizer(target: self, action:
@@ -21,13 +23,38 @@ class LoginFormController: UIViewController {
     @IBOutlet weak var passwordInput: UITextField!
     
     @IBAction func tapLoginButton(_ sender: Any) {
+        if shouldPerformSegue(withIdentifier: "Login", sender: nil){
+            performSegue(withIdentifier: "Login", sender: nil)
+        }
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender:
+    Any?) -> Bool {
+        let checkResult = checkUserData()
+        
+        if !checkResult {
+            showLoginError()
+        }
+        
+        return checkResult
+    }
+    
+    func checkUserData() -> Bool {
         let login = loginInput.text!
         let password = passwordInput.text!
-        if login == "Im" && password == "12" {
-        print("auth success")
-        } else {
-        print("auth denied")
+        guard login == "1" && password == "2" else{
+            return false
         }
+        session.userId = 1
+        session.getToken()
+        return true
+    }
+    
+    func showLoginError() {
+        let alter = UIAlertController(title: "Error", message: "Invalid login or password", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alter.addAction(action)
+        present(alter, animated: true, completion: nil)
     }
     
     @objc func keyboardWasShown(notification: Notification) {
