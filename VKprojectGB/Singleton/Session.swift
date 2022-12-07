@@ -13,8 +13,8 @@ class Session{
     
     private init(){}
     
-    var token: String = "admin"
-    var userId: Int = 0
+    var token: String = ""
+    var id: Int = 0
     
     func getToken(){
         self.token = UUID().uuidString
