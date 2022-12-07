@@ -16,7 +16,7 @@ class SessionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        idLabel.text = String(session.id)
+        idLabel.text = String(session.userId)
         tokenLabel.text = session.token
 
         // Do any additional setup after loading the view.
