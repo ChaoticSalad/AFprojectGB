@@ -54,7 +54,8 @@ extension LoginVKController: WKNavigationDelegate{
         if let token = params["access_token"], let id = params["user_id"]{
             Session.shared.id = Int(id)!
             Session.shared.token = token
-            print(token)
+            print("token =\(token) and id = \(id)")
+            
             decisionHandler(.cancel)
             performSegue(withIdentifier: "vkdata", sender: nil)
             
